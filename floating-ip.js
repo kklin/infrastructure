@@ -1,6 +1,7 @@
 // AWS: http://docs.aws.amazon.com/cli/latest/reference/ec2/allocate-address.html
 // Google: https://cloud.google.com/compute/docs/configure-instance-ip-addresses#reserve_new_static
-var nginx = require("github.com/quilt/nginx");
+const {createDeployment, Machine, MachineRule} = require("@quilt/quilt");
+var nginx = require("@quilt/nginx");
 
 var floatingIp = "xxx.xxx.xxx.xxx (CHANGE ME)"
 var deployment = createDeployment({});
