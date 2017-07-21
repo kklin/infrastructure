@@ -6,7 +6,7 @@ var nginx = require("@quilt/nginx");
 var floatingIp = "xxx.xxx.xxx.xxx (CHANGE ME)"
 var deployment = createDeployment({});
 
-var app = nginx.New(80);
+var app = nginx.createService(80);
 
 app.place(new MachineRule(false, {floatingIp: floatingIp}));
 deployment.deploy(app);
