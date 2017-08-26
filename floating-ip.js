@@ -6,7 +6,7 @@ const nginx = require('@quilt/nginx');
 const floatingIp = 'xxx.xxx.xxx.xxx (CHANGE ME)';
 const deployment = createDeployment({});
 
-const app = nginx.createService(80);
+const app = nginx.createContainer(80);
 
 app.placeOn({ floatingIp });
 deployment.deploy(app);
